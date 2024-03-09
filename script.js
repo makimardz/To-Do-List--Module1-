@@ -4,8 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const todoList = document.getElementById('todo-list');
     const clearAllButton = document.getElementById('clear-all-btn');
     const sortButton = document.getElementById('sort-btn');
-    const addTasksRecursivelyButton = document.getElementById('add-tasks-recursively-btn'); // New button
+    const addTasksRecursivelyButton = document.getElementById('add-tasks-recursively-btn'); 
 
+    
     addButton.addEventListener('click', function() {
         let taskText = inputField.value.trim();
         if(taskText !== "") {
