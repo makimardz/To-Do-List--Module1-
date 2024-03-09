@@ -1,0 +1,39 @@
+
+body, button, input {
+    font-family: 'Poppins', sans-serif; 
+}
+
+#todo-app {
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+#todo-list li {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.delete-btn {
+    margin-left: 10px;
+    color: red;
+    cursor: pointer;
+}
+
+/* CSS to hide the "No tasks" message by default */
+#no-tasks-message {
+    display: none;
+}
+
+/* CSS to show the "No tasks" message when the task list is empty */
+#todo-list:empty + #no-tasks-message {
+    display: block;
+}
