@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const todoList = document.getElementById('todo-list');
     const clearAllButton = document.getElementById('clear-all-btn');
     const sortButton = document.getElementById('sort-btn');
+    const addTasksRecursivelyButton = document.getElementById('add-tasks-recursively-btn'); // New button
 
     addButton.addEventListener('click', function() {
         let taskText = inputField.value.trim();
@@ -55,5 +56,22 @@ document.addEventListener('DOMContentLoaded', function() {
         const sortedTasks = tasks.sort((a, b) => a.textContent.localeCompare(b.textContent));
         todoList.innerHTML = '';
         sortedTasks.forEach(task => todoList.appendChild(task));
+    }
+
+    // Add tasks recursively button event listener
+    addTasksRecursivelyButton.addEventListener('click', function() {
+        const taskText = inputField.value.trim(); // Get the task text from input
+        if (taskText !== "") {
+            const recursiveCount = 5; // Change this to the desired recursive count
+            addTasksRecursively(taskText, recursiveCount); // Pass task text to the function
+        }
+    });
+
+    // Function to add tasks recursively
+    function addTasksRecursively(taskText, count) {
+        if (count > 0) {
+            addTask(taskText); // Use the task text provided
+            addTasksRecursively(taskText, count - 1); // Recursively call the function
+        }
     }
 });
