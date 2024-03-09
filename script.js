@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const sortButton = document.getElementById('sort-btn');
     const addTasksRecursivelyButton = document.getElementById('add-tasks-recursively-btn'); 
 
-    
+
     addButton.addEventListener('click', function() {
         let taskText = inputField.value.trim();
         if(taskText !== "") {
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     addTasksRecursivelyButton.addEventListener('click', function() {
         const taskText = inputField.value.trim(); // Get the task text from input
         if (taskText !== "") {
-            const recursiveCount = 5; // Change this to the desired recursive count
+            const recursiveCount = 2; // Change this to the desired recursive count
             addTasksRecursively(taskText, recursiveCount); // Pass task text to the function
         }
     });
